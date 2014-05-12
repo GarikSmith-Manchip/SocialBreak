@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	
+		<!-- CSS -->
+		<link rel = "stylesheet" href = "style/jquerymobile.css">
+		<link rel = "stylesheet" href = "style/style.css">
+		 
+		<!-- Javascript -->
+		<script src = "javascript/jquery.js"></script>
+		<script src = "javascript/jquerymobile.js"></script>
+		<script src = "javascript/javascript.js"></script>
+		<script>
+			$("#selector").slider("values", [-1, 0, 1]);
+		</script>
+		<meta charset = "UTF-8">
+		<title>SocialBreak;</title>
+	</head>
+
+	<body>
+	
+<!-- Home ============================================================= --> 
+		<section data-role = "page" id = "home">
+		
+			<!-- Header -->
+			<header data-role = "header" data-theme = "a" class = "header" data-position = "fixed">
+				<div data-role = "collapsible-set" data-inset = "true" data-content-theme = "b">
+					<div class = "menu" >
+						<a href = "#dropdownMenu" class = "ui-btn-left ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-bars" id = "logo" data-transition = "slide"></a>
+					</div>
+					<div id="title">
+					<h4 id="titleText">SocialBreak;</h4>
+					</div>
+				</div>
+				
+				<!-- Navbar -->
+				<a href = "settings.html" rel="external" class = "ui-btn-right ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-right ui-icon-gear" data-transition = "slide" id = "gear"></a>
+				
+                <a href = "help.html" rel="external" class = "ui-btn-right ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-right ui-icon-info helpButton" data-transition = "slide" id = "question"></a>
+			</header>
+			
+			<!-- Dropdown Menu -->
+			<div data-role = "panel" data-theme = "a" id = "dropdownMenu" data-position = "left" data-display = "overlay">
+				<ul data-role = "listview" id = "dropdown" >
+                    <li><a href = "home.html" rel="external" data-transition = "slide">Home</a></li>
+                    <li><a href = "friends.html" rel="external" data-transition = "slide">Friends</a></li>
+                    <li><a href = "chat.html" rel="external" data-transition = "slide">Chat</a></li>
+                    <li><a href = "help.html" rel="external" data-transition = "slide">Help</a></li>
+					<li><a href = "tos.html" rel="external" data-transition = "slide">ToS</a></li>
+                </ul>
+			</div>	
+			<!-- Content -->
+			<!-- Unable to find a 3-way slider, will be using a select dropdown menu. Y/n? -->
+			<div class="ui-grid-a" id = "profilegrid">
+				<div class="ui-block-a" id = "profilePicture">Picture</div>
+					<img src="#"/>
+					<input type="range" name="slider" id="slider" value="0" min="-1" max="1"></input>
+					<!--
+					<label for="selector" class="select">Relationship</label>
+					
+					<select name="selector" id="selector" data-role="slider">
+						<option value="ignore">Ignore</option>
+						<option value="stranger">Stranger</option>
+						<option value="friend">Friend</option>
+					</select>
+					-->
+				<div class="ui-block-b">Top 3 Tags
+					<a href=# data-role=button> Tag1 </a>
+					<a href=# data-role=button> Tag2 </a>
+					<a href=# data-role=button> Tag3 </a>
+				</div> 
+			</div>
+			<form>
+				<div class="ui-field-contain">
+					<label for="textarea">Description:</label>
+					<textarea data-mini="true" cols="50" rows="5" name="text" id="text"></textarea>
+				</div>
+			</form>
+			<div class="Tags">Tags</div>
+			
+			<!-- Footer -->
+			<footer data-role = "footer" data-theme = "a" data-position = "fixed">
+			</footer>
+		</section>
+	</body>
+</html>

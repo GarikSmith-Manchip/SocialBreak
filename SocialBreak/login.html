@@ -1,0 +1,60 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+	
+		<!-- CSS -->
+		<link rel = "stylesheet" href = "style/jquerymobile.css">
+		<link rel = "stylesheet" href = "style/style.css">
+		 
+		<!-- Javascript -->
+		<script src = "javascript/jquery.js"></script>
+		<script src = "javascript/jquerymobile.js"></script>
+		<script src = "javascript/javascript.js"></script>
+
+		<meta charset = "UTF-8">
+		<title>SocialBreak;</title> 
+	</head> 
+		
+	<body> 
+		<div data-role = "page" id = "login">
+		
+			<!-- header -->
+			<header data-role = "header" data-theme = "a" class = "header" data-position = "fixed">
+			<h1>SocialBreak;</h1>
+			</header>
+			
+					
+			<form name = "form" id = "form" method = "post">
+				<div data-role = "content"> 
+				
+					<!-- Email -->
+					<div data-role = "fieldcontain">
+						<input type = "text" name = "email" id = "email" placeholder = "Email" value = ""  />
+					</div>
+					
+					<!-- Password -->
+					<div data-role = "fieldcontain">
+						<input type = "password" name = "password" id = "password" placeholder = "Password" value = ""  />
+					</div>
+
+					<!-- Login -->
+					<div data-role = "fieldcontain">
+						<button type = "button" onclick = "return validateForm();">Login</button>
+					</div>
+					
+					<!-- Sign Up -->
+					<div data-role = "fieldcontain">
+						<a data-role = "button" href = "registration.html" rel = "external">Sign Up</a>
+					</div>
+				</div>
+			</form>
+			
+			<!-- Footer -->
+			<div data-role = "footer" data-position = "fixed">
+				<div data-role = "navbar">
+					<p>Social Break; Redefining Social Interaction.</p>
+				</div>	
+			</div>
+		</div>
+	</body>
+</html>

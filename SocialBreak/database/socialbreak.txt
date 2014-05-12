@@ -1,0 +1,160 @@
+SQL> --
+SQL> DROP TABLE Reports;
+
+Table dropped.
+
+SQL> DROP TABLE Login;
+
+Table dropped.
+
+SQL> DROP TABLE Profile;
+
+Table dropped.
+
+SQL> DROP TABLE Friend;
+
+Table dropped.
+
+SQL> DROP TABLE Ignored;
+
+Table dropped.
+
+SQL> DROP TABLE TopTags;
+
+Table dropped.
+
+SQL> DROP TABLE ProfileTag;
+
+Table dropped.
+
+SQL> DROP TABLE Tag;
+
+Table dropped.
+
+SQL> DROP TABLE UserAccount;
+
+Table dropped.
+
+SQL> --
+SQL> CREATE TABLE UserAccount
+  2  	     (userID	 NUMBER(8,0)	 NOT NULL
+  3  	     ,fName	 VARCHAR2(64)	 NOT NULL
+  4  	     ,lName	 VARCHAR2(64)	 NOT NULL
+  5  	     ,DoB	 DATE		 NOT NULL
+  6  	     ,email	 VARCHAR2(64)	 NOT NULL
+  7  	     ,PRIMARY KEY (userID)
+  8  	     ,CONSTRAINT chk_email CHECK (email LIKE '%@my.bcit.ca')
+  9  );
+
+Table created.
+
+SQL> --
+SQL> CREATE TABLE Login
+  2  	     (userID	 NUMBER(8,0)	 NOT NULL
+  3  	     ,prefEmail  VARCHAR2(64)	 NOT NULL
+  4  	     ,password	 VARCHAR2(256)	 NOT NULL
+  5  	     ,PRIMARY KEY (userID)
+  6  	     ,FOREIGN KEY (userID) REFERENCES UserAccount(userID)
+  7  		     ON DELETE CASCADE
+  8  );
+
+Table created.
+
+SQL> --
+SQL> CREATE TABLE Tag
+  2  	     (tagID	 NUMBER(4,0)	 NOT NULL
+  3  	     ,tagName	 VARCHAR2(16)	 NOT NULL
+  4  	     ,PRIMARY KEY (tagID)
+  5  );
+
+Table created.
+
+SQL> --
+SQL> CREATE TABLE ProfileTag
+  2  	     (userID	 NUMBER(8,0)	 NOT NULL
+  3  	     ,tagID	 NUMBER(4,0)	 NOT NULL
+  4  	     ,PRIMARY KEY (userID, tagID)
+  5  	     ,FOREIGN KEY (userID) REFERENCES UserAccount(userID)
+  6  		     ON DELETE CASCADE
+  7  	     ,FOREIGN KEY (tagID) REFERENCES Tag(tagID)
+  8  		     ON DELETE CASCADE
+  9  );
+
+Table created.
+
+SQL> --
+SQL> CREATE TABLE TopTags
+  2  	     (userID	 NUMBER(8,0)	 NOT NULL
+  3  	     ,rankOne	 NUMBER(4,0)
+  4  	     ,rankTwo	 NUMBER(4,0)
+  5  	     ,rankThree  NUMBER(4,0)
+  6  	     ,PRIMARY KEY (userID)
+  7  	     ,FOREIGN KEY (userID) REFERENCES UserAccount(userID)
+  8  		     ON DELETE CASCADE
+  9  	     ,FOREIGN KEY (rankOne) REFERENCES Tag(tagID)
+ 10  		     ON DELETE SET NULL
+ 11  	     ,FOREIGN KEY (rankTwo) REFERENCES Tag(tagID)
+ 12  		     ON DELETE SET NULL
+ 13  	     ,FOREIGN KEY (rankThree) REFERENCES Tag(tagID)
+ 14  		     ON DELETE SET NULL
+ 15  );
+
+Table created.
+
+SQL> --
+SQL> -- Change proPIC to support user-uploaded images at some point
+SQL> -- Note: Ask Keith wtf is up with varbinary
+SQL> --      ,proPic	     VARBINARY(max)  NOT NULL
+SQL> CREATE TABLE Profile
+  2  	     (userID	 NUMBER(8,0)		     NOT NULL
+  3  	     ,proPic	 NUMBER(2,0)	 DEFAULT 0   NOT NULL
+  4  	     ,proBio	 VARCHAR2(500)		     NOT NULL
+  5  	     ,PRIMARY KEY (userID)
+  6  	     ,FOREIGN KEY (userID) REFERENCES UserAccount(userID)
+  7  		     ON DELETE CASCADE
+  8  );
+
+Table created.
+
+SQL> --
+SQL> CREATE TABLE Friend
+  2  	     (userID	 NUMBER(8,0)	 NOT NULL
+  3  	     ,friendID	 NUMBER(8,0)	 NOT NULL
+  4  	     ,PRIMARY KEY (userID, friendID)
+  5  	     ,FOREIGN KEY (userID) REFERENCES UserAccount(userID)
+  6  		     ON DELETE CASCADE
+  7  	     ,FOREIGN KEY (friendID) REFERENCES UserAccount(userID)
+  8  		     ON DELETE CASCADE
+  9  );
+
+Table created.
+
+SQL> --
+SQL> CREATE TABLE Ignored
+  2  	     (userID	 NUMBER(8,0)	 NOT NULL
+  3  	     ,ignoredID  NUMBER(8,0)	 NOT NULL
+  4  	     ,PRIMARY KEY (userID, ignoredID)
+  5  	     ,FOREIGN KEY (userID) REFERENCES UserAccount(userID)
+  6  		     ON DELETE CASCADE
+  7  	     ,FOREIGN KEY (ignoredID) REFERENCES UserAccount(userID)
+  8  		     ON DELETE CASCADE
+  9  );
+
+Table created.
+
+SQL> --
+SQL> CREATE TABLE Reports
+  2  	     (userID	 NUMBER(8,0)	 NOT NULL
+  3  	     ,reportedID NUMBER(8,0)	 NOT NULL
+  4  	     ,reportDate TIMESTAMP	 NOT NULL
+  5  	     ,PRIMARY KEY (userID, reportedID, reportDate)
+  6  	     ,FOREIGN KEY (userID) REFERENCES UserAccount(userID)
+  7  		     ON DELETE CASCADE
+  8  	     ,FOREIGN KEY (reportedID) REFERENCES UserAccount(userID)
+  9  		     ON DELETE CASCADE
+ 10  );
+
+Table created.
+
+SQL> --
+SQL> SPOOL OFF

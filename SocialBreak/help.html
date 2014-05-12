@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	
+		<!-- CSS -->
+		<link rel = "stylesheet" href = "style/jquerymobile.css">
+		<link rel = "stylesheet" href = "style/style.css">
+		 
+		<!-- Javascript -->
+		<script src = "javascript/jquery.js"></script>
+		<script src = "javascript/jquerymobile.js"></script>
+		<script src = "javascript/javascript.js"></script>
+
+		<meta charset = "UTF-8">
+		<title>SocialBreak;</title>
+	</head>
+	
+	<body>
+	<section data-role = "page" id = "help">
+		
+			<!-- Header -->
+			<header data-role = "header" data-theme = "a" class = "header" data-position = "fixed">
+				<div data-role = "collapsible-set" data-inset = "true" data-content-theme = "b">
+					<div class = "menu" >
+						<a href = "#dropdownMenu" class = "ui-btn-left ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-bars" id = "logo" data-transition = "slide"></a>
+					</div>
+					<div id="title">
+					<h4 id="titleText">SocialBreak;</h4>
+					</div>
+				</div>
+				
+				<!-- Navbar -->
+				<a href = "settings.html" rel="external" class = "ui-btn-right ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-right ui-icon-gear" data-transition = "slide" id = "gear"></a>
+				
+                <a href = "help.html" rel="external" class = "ui-btn-right ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-right ui-icon-info helpButton" data-transition = "slide" id = "question"></a>
+			</header>
+
+			<!-- Dropdown Menu -->
+			<div data-role = "panel" data-theme = "a" id = "dropdownMenu" data-position = "left" data-display = "overlay">
+				<ul data-role = "listview" id = "dropdown" >
+					<li><a href = "home.html" rel="external" data-transition = "slide">Home</a></li>
+                    <li><a href = "profile.html" rel="external" data-transition = "slide">Profile</a></li>
+                    <li><a href = "friends.html" rel="external" data-transition = "slide">Friends</a></li>
+                    <li><a href = "chat.html" rel="external" data-transition = "slide">Chat</a></li>
+					<li><a href = "tos.html" rel="external" data-transition = "slide">ToS</a></li>
+                </ul>
+			</div>
+				
+			<!-- Content -->
+			<div data-role = "collapsibleset" data-theme = "a" data-inset = "false" id = "helpCollapse">
+				<div data-role = "collapsible">
+					<h3>FAQ's</h3>
+					<ul data-role = "listview">
+						<li><strong>Q: What if I'm addicted to "dat ass"?</strong>
+						<br><br>A: You look away</li>
+						<li><strong>Q: Is mouth hair normal?</strong>
+						<br><br></br>A: ...No</li>
+						<li><strong>Q: Can I eat Doge's'?</strong>
+						<br><br></br>A: Not if your Canadian</li>
+						<li><strong>Q: What does the inside of my password feel like?</strong>
+						<br><br></br>A: Food</li>
+					</ul>
+				</div>
+				
+				<div data-role = "collapsible">
+					<h3>Contact Us</h3>
+					<ul data-role = "listview">
+						<li>support@socialbreak.ca</li>
+					</ul>
+				</div>
+				
+				<div data-role = "collapsible">
+					<h3>About</h3>
+					<ul data-role = "listview">
+						<li><strong>Sanders Lee</strong>
+						<br>A00888502<br>slee_colonel@hotmail.com</li>
+						<li><strong>Garik Smith-Manchip</strong>
+						<br>A00900749<br>gariksm2@gmail.com</li>
+						<li><strong>Andrew Kopczynski</strong>
+						<br>A00858541<br>kopczynski.zesty@gmail.com</li>
+						<li><strong>Daniel Li</strong>
+						<br>A00884661<br>lazy_5000@hotmail.com</li>
+						<li><strong>Kevin Thet</strong>
+						<br>A00860087<br>kevin.thet@gmail.com </li>
+					</ul>
+				</div>
+				
+				<div data-role = "listview">
+					<li><h3><a href = "tos.html" rel="external" data-transition = "slide">Terms of Service</a></h3></li>
+				</div>
+				
+				<div data-role = "listview">
+					<li><h3><a href = "#" rel="external" data-transition = "slide">Tutorial</a></h3></li>
+				</div>
+			</div>
+			
+			<!-- Footer -->
+			<footer data-role = "footer" data-theme = "a" data-position = "fixed">
+			</footer>
+		</section>
+	</body>
+</html>

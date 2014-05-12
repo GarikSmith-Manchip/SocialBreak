@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	
+		<!-- CSS -->
+		<link rel = "stylesheet" href = "style/jquerymobile.css">
+		<link rel = "stylesheet" href = "style/style.css">
+		 
+		<!-- Javascript -->
+		<script src = "javascript/jquery.js"></script>
+		<script src = "javascript/jquerymobile.js"></script>
+		<script src = "javascript/javascript.js"></script>
+
+		<meta charset = "UTF-8">
+		<title>SocialBreak;</title>
+	</head>
+
+	<body>
+	
+<!-- Home ============================================================= --> 
+		<section data-role = "page" id = "home">
+		
+			<!-- Header -->
+			<header data-role = "header" data-theme = "a" class = "header" data-position = "fixed">
+				<div data-role = "collapsible-set" data-inset = "true" data-content-theme = "b">
+					<div class = "menu" >
+						<a href = "#dropdownMenu" class = "ui-btn-left ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-bars" id = "logo" data-transition = "slide"></a>
+					</div>
+					<div id="title">
+					<h4 id="titleText"> SocialBreak;</h4>
+					</div>
+				</div>
+				
+				<!-- Navbar -->
+				<a href = "settings.html" rel="external" class = "ui-btn-right ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-right ui-icon-gear" data-transition = "slide" id = "gear"></a>
+				
+                <a href = "help.html" rel="external" class = "ui-btn-right ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-right ui-icon-info helpButton" data-transition = "slide" id = "question"></a>
+			</header>
+			
+			<!-- Dropdown Menu -->
+			<div data-role = "panel" data-theme = "a" id = "dropdownMenu" data-position = "left" data-display = "overlay">
+				<ul data-role = "listview" id = "dropdown" >
+                    <li><a href = "profile.html" rel="external" data-transition = "slide">Profile</a></li>
+                    <li><a href = "friends.html" rel="external" data-transition = "slide">Friends</a></li>
+                    <li><a href = "chat.html" rel="external" data-transition = "slide">Chat</a></li>
+                    <li><a href = "help.html" rel="external" data-transition = "slide">Help</a></li>
+					<li><a href = "tos.html" rel="external" data-transition = "slide">ToS</a></li>
+                </ul>
+			</div>
+				
+			<!-- Content -->
+			<div class = "ui-grid-b" id = "ui-bar">
+				<div class = "ui-block-a" id = "chatbar">
+					<a href = "chat.html" rel="external" id = "chatbutton" data-transition = "slide" class = "ui-btn ui-icon-comment ui-btn-icon-top"></a>
+				</div>
+				<div class = "ui-block-b" id = "friendbar">
+					<a href = "friends.html" rel="external" id = "friendbutton" data-transition = "slide" class = "ui-btn ui-icon-user ui-btn-icon-top"></a>
+				</div>
+				<div class = "ui-block-c" id = "requestbar">	
+					<a href = "requests.html" rel="external" id = "requestbutton" data-transition = "slide" class = "ui-btn ui-icon-mail ui-btn-icon-top"></a>
+				</div>
+			</div>
+			
+			<div class = "containing-element" id = "avaibar">
+				<select name = "slider" id = "availability" data-role = "slider">
+					<option type = "range" value = "off">Offline</option>
+					<option type = "range" value = "on">Online</option>
+				</select>
+				<div>
+					<a href = "listings.html" rel="external" id = "listingbutton" data-transition = "slide" class = "ui-btn ui-icon-check ui-btn-icon-top"></a>
+				</div>
+			</div>
+			
+			<!-- Footer -->
+			<footer data-role = "footer" data-theme = "a" data-position = "fixed">
+			<div data-role = "footer" data-position = "fixed">
+				<div data-role = "navbar" id = "moto">
+					<p>Social Break; Redefining Social Interaction.</p>
+				</div>	
+			</div>
+			</footer>
+		</section>
+	</body>
+</html>

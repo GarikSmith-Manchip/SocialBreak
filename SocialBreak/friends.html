@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	
+		<!-- CSS -->
+		<link rel = "stylesheet" href = "style/jquerymobile.css">
+		<link rel = "stylesheet" href = "style/style.css">
+		 
+		<!-- Javascript -->
+		<script src = "javascript/jquery.js"></script>
+		<script src = "javascript/jquerymobile.js"></script>
+		<script src = "javascript/javascript.js"></script>
+
+		<meta charset = "UTF-8">
+		<title>SocialBreak;</title>
+	</head>
+	
+	<body>
+	<section data-role = "page" id = "friends">
+		
+			<!-- Header -->
+			<header data-role = "header" data-theme = "a" class = "header" data-position = "fixed">
+								<div data-role = "collapsible-set" data-inset = "true" data-content-theme = "b">
+					<div class = "menu" >
+						<a href = "#dropdownMenu" class = "ui-btn-left ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-bars" id = "logo" data-transition = "slide"></a>
+					</div>
+					<div id="title">
+					<h4 id="titleText">SocialBreak;</h4>
+					</div>
+				</div>
+				
+				<!-- Navbar -->
+				<a href = "settings.html" rel="external" class = "ui-btn-right ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-right ui-icon-gear" data-transition = "slide" id = "gear"></a>
+                <a href = "help.html" rel="external" class = "ui-btn-right ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-right ui-icon-info helpButton" data-transition = "slide" id = "question"></a>
+			</header>
+			
+			<!-- Dropdown Menu -->
+			<div data-role = "panel" data-theme = "a" id = "dropdownMenu" data-position = "left" data-display = "overlay">
+				<ul data-role = "listview" id = "dropdown" >
+					<li><a href = "home.html" rel="external" data-transition = "slide">Home</a></li>
+                    <li><a href = "profile.html" rel="external" data-transition = "slide">Profile</a></li>
+                    <li><a href = "chat.html" rel="external" data-transition = "slide">Chat</a></li>
+                    <li><a href = "help.html" rel="external" data-transition = "slide">Help</a></li>
+					<li><a href = "tos.html" rel="external" data-transition = "slide">ToS</a></li>
+                </ul>
+			</div>
+			
+			<!-- Content -->
+			<div role = "main" class = "ui-content">
+				<img src = "images/jqm.png" alt = "jquery logo"/>
+				<p>Friends</p>
+			</div>
+			
+			<!-- Footer -->
+			<footer data-role = "footer" data-theme = "a" data-position = "fixed">
+			</footer>
+		</section>
+	</body>
+</html>

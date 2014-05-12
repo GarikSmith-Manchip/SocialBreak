@@ -1,0 +1,29 @@
+-- -- -- -- INSERT ROWS:
+-- Normal tables:
+INSERT INTO `TableNameHere` (`primaryKeyExample`,`nameExample`,`awesomeScale`)
+    VALUES (0, 'Andrew', 'the bestest');
+	
+-- Tables with AUTO_INCREMENT:
+INSERT INTO `TableNameHere` (`firstName`, `lastName`, `birthday`)
+	VALUES ('John', 'Doe', '2014-01-01');
+
+-- NOTE:
+--    Use grave accents ( these things: ` ) to surround columns
+--    Use single quotes ( these things: ' ) to surround strings you put in
+--    UserAccount and Tag tables use 'AUTO_INCREMENT'. Don't speicify the ID
+--    Database starts counting from ID '1' instead of ID '0'
+
+INSERT INTO UserAccount (`fName`, `lName`, `DoB`, `email`, `activated`, `ageGate`)
+	VALUES ('Kevin','Thet','2014-01-01','kthetoo@my.bcit.ca', 1, 1);
+	
+INSERT INTO UserAccount (`fName`, `lName`, `DoB`, `email`, `activated`, `ageGate`)
+	VALUES ('Sanders','Lee','2014-01-01','slee767@my.bcit.ca', 1, 1);
+	
+INSERT INTO UserAccount (`fName`, `lName`, `DoB`, `email`, `activated`, `ageGate`)
+	VALUES ('Daniel','Li','2014-01-01','dli98@my.bcit.ca', 1, 1);
+	
+INSERT INTO UserAccount (`fName`, `lName`, `DoB`, `email`, `activated`, `ageGate`)
+	VALUES ('Andrew','Kopczynski','2014-01-01','akopczynski1@my.bcit.ca', 1, 1);
+	
+INSERT INTO UserAccount (`fName`, `lName`, `DoB`, `email`, `activated`, `ageGate`)
+	VALUES ('Garik','Smith-Manchip','2014-01-01','gsmithmanchip@my.bcit.ca', 1, 1);
