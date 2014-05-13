@@ -1,47 +1,130 @@
-@charset "UTF-8";
-/* CSS Document */
-
-* 
+/*Melon CSS*/
+.error
 {
-	margin: 0px;
-	padding: 0px;
+	color:#ff0000;
+	font-weight: bold;
+}
+.errorBox
+{
+	border: solid red;
 }
 
-#moto
+ul
 {
-	background-color:#ff6600
+	list-style: none;
 }
 
-#home, #chat, #friends, #requests, #settings, #help, #profile, #ToS, #registration, #login
+#avaiHeader
 {
-	 background: url(../images/black.jpg);
+	font-family:Arial;
+	font-weight: bold;
+	text-align:center;
 }
 
-h1, h3, div, p
+#dropdownMenu
 {
-	color: white;
+	position: fixed;
+	width: 270px !important;
+	height: 200px;
+	top: 50px;
+	z-index: 2;
 }
 
-.border-orange
+#menu
 {
-	border: solid #ff6600 !important;
+	width:20px;
+	top:1px;
+	height:15px;
+	border:dashed orange;
 }
 
-.ui-header 
+#settings
 {
-	background-color: #ff6600;
+	height: 10px;
+	width: 2px;
+	top:7px;
+	right:3px;
+	border:dashed orange;
 }
 
-.toggleDiv
+#help
 {
-	min-height:0px;
-	height:50px;
-	margin:0px;
+	position: fixed;
+	right: 40px;
+	width: 2px;
+	height: 10px;
+	top:8px;
+	border:dashed orange;
 }
-.toggleDiv .ui-slider-switch 
+
+#chatButton
+{
+	border:dashed orange;
+}
+
+#friendButton
+{
+	border:dashed orange;
+}
+
+#requestButton
+{
+	border:dashed orange;
+}
+
+#listingButton
+{
+	text-align:left top;
+	font-size:8px;
+	position:relative;
+	width:105px;
+	height:40px;
+	bottom:65px;
+	left:135px;
+	border:dashed orange;
+}
+
+.customButton 
+{
+  border:1px solid #ff0000; /*border color */
+  background:#FF2400; /*the color of the button  */
+  padding:5px 15px; /*add padding inside of the button*/
+  -moz-border-radius: 5px; /* add rounded corners */
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 0 4px rgba(0,0,0, .75); /* add drop shadows */
+  -moz-box-shadow: 0 0 4px rgba(0,0,0, .75);
+  box-shadow: 0 0 4px rgba(0,0,0, .75);
+  color:#f3f3f3; /* text color is white */
+  font-size:1em; /* font size is 1em */
+  cursor:pointer; /* change cursor when hover */
+}
+
+.customButton:hover, .customButton:focus 
+{
+  background-color :#FDD017; /* the background a little darker*/
+  -webkit-box-shadow: 0 0 1px rgba(0,0,0, .75); /* drop shadow is narrower to give a pushed effect */
+  -moz-box-shadow: 0 0 1px rgba(0,0,0, .75);
+  box-shadow: 0 0 1px rgba(0,0,0, .75);
+}
+ 
+.avaibar
+{
+	border:dashed orange;
+	width:95%;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.avaibar .ui-slider-switch 
 { 
-	width: 8.5em; 
-	margin:0px;
+	width: 8em;
+}
+
+.ui-slider .ui-slider-handle
+{
+	position: absolute;
+	font-size: 10%;
 	padding:0px;
 }
 
@@ -50,312 +133,82 @@ h1, h3, div, p
 	position:absolute;
 	right:0px;
 	top:45px;
-	border:dashed red;
+	border:dashed black 1px;
 	width:32%; 
+	margin-left:2px;
 	height:85%;
 }
 
 #listings
 {
 	position:absolute;
-	top:130px;
+	top:px;
+	left:2px;
 	width:65%;
 	overflow-y:scroll;
 	padding:0;
 	margin:0;
 	height:69%;
+	border:dashed black 1px;
+	padding-left:0px;
+	margin-left:0px;
+	
 }
 
 .listingsProfile
 {
 	position:relative;
 	top:5px;
-	left:2px;
+	left:0px;
 	bottom:5px;
+	padding-left:0px;
+	margin-left:0px;
+	padding-right:0px;
+	margin-right:0px;
 	padding-bottom:5px;
 	margin-bottom:6px;
 	margin-top:6px;
-}
 
+}
 .listingsPic
 {
-	position:absolute;
-	width:62px;
+	position:relative;
+	width:65px;
 	height:62px;
-	left:2px;
+	left:-35px;
 	padding:0;
 	margin:0;
-	
+	border:dashed orange 1px;
+	background:url(/images/edlan.png) no-repeat;
 }
 
 .listingsFirst
 {	
-	position:relative;
-	width:70px;
-	height:4px;
-	left:67px;
+	position:absolute;
+	width:90px;
+	height:25px;
+	top:0px;
+	left:40px;
 	margin-top:1px;
 	margin-bottom:1px;
+	border:dashed orange 1px;
 }
 
 .listingsLast
 {
-	position:relative;
-	width:70px;
-	height:4px;
-	left:67px;
+	position:absolute;
+	width:90px;
+	height:25px;
+	top:30px;
+	left:40px;
 	margin-top:1px;
 	margin-bottom:1px;
+	border:dashed orange 1px;
 }
 
-.ui-mobile .ui-page .ui-slider-input,
-.ui-mobile .ui-dialog .ui-slider-input
-{
-	display: none;
-	
-}
-
-#title
-{
-	padding:0;
-	margin:0;
-	position:relative;
-	left:20%;
-	width:150px;
-}
-
-#dropdownMenu
-{
-	position: fixed;
-	width: 270px !important;
-	height: 200px;
-	top: 46px;
-	z-index: 2;
-}
-
-#gear
-{
-	height: 10px;
-	width: 2px;
-	top:7px;
-	right:0px;
-	border:solid black 0.5px;
-}
-
-#SB
-{
-	border:solid black 0.5px;
-	padding:0px;
+.toggleDiv .ui-slider-switch 
+{ 
+	width: 8.5em; 
 	margin:0px;
-	height:30px;
-}
-
-#titleText
-{
-	position:absolute;
-	top:5px;
-	color: black;
-	font-family: Arial;
 	padding:0px;
-	margin:0px;
-	font-size: 15px;
-}
-
-#logo
-{
-	height: 10px;
-	width:2px;
-	left:0px;
-	top:8px;
-	border:solid black 0.5px;
-}
-
-
-#question
-{
-	position: fixed;
-	right: 50px;
-	width: 2px;
-	height: 10px;
-	top:8px;
-	border:solid black 0.5px;
-}
-
-#helpCollapse
-{
-	position: absolute;
-	left: 15px;
-	width: 100%;
-	padding: 0;
-	margin-left: auto;
-	margin-right: auto;
-}
-
-#ui-bar
-{
-	height: 250px;
-}
-
-#chatbar
-{
-	padding: 0;
-	position: relative;
-	left: 25px;
-	width: 20px;
-	height: 20px;
-	top: 50px;
-	margin-left: auto;
-	margin-right: auto;
-	z-index: 0;
-
-}
-
-#friendbar
-{
-	padding: 0;
-	position: relative;
-	left: 90px;
-	width: 20px;
-	height: 20px;
-	top: 50px;
-	margin-left: auto;
-	margin-right: auto;
-	z-index: 0;
-}
-
-#requestbar
-{
-	padding: 0;
-	position: relative;
-	left: 155px;
-	width: 20px;
-	height: 20px;
-	top: 50px;
-	margin-left: auto;
-	margin-right: auto;
-	z-index: 0;
-}
-
-#avaibar
-{
-	position:absolute;
-	left:10px;
-	bottom:20px;
-	padding-left: 10px;
-}
-
-#listingbutton
-{
-	position: relative;
-	left: 130px;
-	bottom: 60px;
-	width: 20%;
-	height: 8px;
-	background-color: #ff6600;
-}
-
-#chatbutton
-{
-	left: 5px;
-	right: 5px;
-	width: 40%;
-	height: 40%;
-	background-color: #ff6600;
-}
-
-#requestbutton
-{
-	left: 5px;
-	right: 5px;
-	width: 40%;
-	height: 40%;
-	background-color: #ff6600;
-}
-
-#friendbutton
-{
-	left: 5px;
-	right: 5px;
-	width: 40%;
-	height: 40%;
-	background-color: #ff6600;
-}
-
-#profilegrid
-{
-	width: 700px;
-	margin-right: auto;
-}
-
-#profilePicture
-{
-	width: 700px;
-	margin-right: auto;
-}
-
-#slider
-{
-	width: 700px;
-	margin-left: auto;
-}
-
-.Tags
-{
-	border: dashed;
-	height: 800px;	
-}
-
-nav ul li .ui-btn 
-{
-	background-color: #ff6600 !important;
-	color: white !important;
-}
-
-.helpButton 
-{
-	position: fixed;
-	top: 4px;
-	right: 110px;
-}
-
-.menu
- {
-	position: fixed;
-	left: 5px;
-	top: 1px;
-	width: 270px;
-	height: 0px;
-	z-index: 1;
-}
-
-.custom-size-flipswitch .ui-flipswitch
-{
-	width: 9em;
-}
-
-.custom-size-flipswitch .ui-flipswitch.ui-flipswitch-active
-{
-	padding-left: 7em;
-	width: 9em;
-}
-
-.header 
-{
-	position: fixed;
-	top: 0px;
-	width: 100%;
-	height: 42px;
-}
-
-.containing-element
-{
-	margin-left: auto;
-	margin-right: auto;
-	width: 500px;
-	height: 150px;
-}
-
-.checkbox
-{
-	width = 100%;
 }
