@@ -19,14 +19,14 @@
 				<p><em>This page uses jQuery Mobile 1.3.0-beta 1</em></p>
 			</div><!-- /content -->
 
-			<div data-role="panel" id="leftpanel" data-display="reveal" data-position="left">
+			<div data-role="panel" id="leftpanel" data-display="overlay" data-position="left">
 				<ul data-role='listview'>
 					<li data-theme='a'>Listview</li>
 					<li>Item A<span class='ui-li-count'>24</span></li>
 				</ul>
 			</div><!-- /leftpanel -->
 			
-			<div data-role="panel" id="rightpanel" data-display="push" data-position="right"data-theme="b">
+			<div data-role="panel" id="rightpanel" data-display="overlay" data-position="right"data-theme="b">
 				<h2>What are you looking for?</h2>
 			</div><!-- /rightpanel -->
 		</div><!-- /page -->
@@ -34,11 +34,11 @@
 		<script type='text/javascript'>
 			$(document).on('pageinit', function(){
 				$("#all").on("swiperight",function(){
-				$("#leftpanel").panel("open");
-			});
+					$("#leftpanel").panel("open");
+				});
 			
-			$("#all").on("swipeleft", function(){
-				$("#rightpanel").panel("open");
+				$("#all").on("swipeleft", function(){
+					$("#rightpanel").panel("open");
 				});
 			});
 		</script>
